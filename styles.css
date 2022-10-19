@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Blue: hsl(246, 80%, 60%);
+  --Light-orange: hsl(15, 100%, 70%);
+  --Soft-blue: hsl(195, 74%, 62%);
+  --Light-red: hsl(348, 100%, 68%);
+  --Lime-green: hsl(145, 58%, 55%);
+  --Violet: hsl(264, 64%, 52%);
+  --Soft-orange: hsl(43, 84%, 65%);
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Pale-Blue: hsl(236, 100%, 87%);
+  --White: white;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--Very-dark-blue);
+  color: var(--Pale-Blue);
+}
+
+.main-container {
+  width: 328px;
+  margin: 77px auto;
+}
+.first-section {
+  position: relative;
+}
+
+.main-card__user {
+  background-color: var(--Blue);
+  display: flex;
+  border-radius: 16px;
+  padding: 30px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.main-card__image {
+  width: 72px;
+  margin-right: 10px;
+  border: 3px solid var(--White);
+  border-radius: 50%;
+}
+
+.main-card__title {
+  font-size: 0.9em;
+  margin: 10px 0 4px;
+}
+
+.main-card__name {
+  font-size: 1.5em;
+  font-weight: 300;
+  color: var(--White);
+}
+
+.main-card__dates {
+  background-color: var(--Dark-blue);
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-around;
+  height: 100px;
+  padding-top: 52px;
+  font-size: 1.2em;
+  position: absolute;
+  width: 100%;
+  top: 105px;
+}
+
+.main-card__frequency:hover {
+  cursor: pointer;
+  color: var(--White);
+}
+
+.second-section {
+  padding-top: 220px;
+}
+
+.card {
+  position: relative;
+  margin-bottom: 105px;
+}
+
+.card__backgroung {
+  background-color: var(--Light-orange);
+  height: 80px;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+}
+
+.card__image {
+  margin-top: -10px;
+  padding-left: 235px;
+}
+
+.card__details {
+  background-color: var(--Dark-blue);
+  display: flex;
+  flex-direction: column;
+  height: 122px;
+  justify-content: space-between;
+  padding: 25px;
+  border-radius: 16px;
+  position: absolute;
+  width: 100%;
+  bottom: -85px;
+}
+
+.card__details:hover {
+  background-color: var(--Desaturated-blue);
+  cursor: pointer;
+}
+
+.card__activity,
+.card__time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__title {
+  font-weight: 500;
+  font-size: 1.2em;
+  color: var(--White);
+}
+
+.card__hour {
+  font-size: 2em;
+  color: var(--White);
+  font-weight: 300;
+}
+
+/* FOOTER */
+.attribution {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* DESKTOP */
+
+@media (min-width: 1200px) {
+  .main-container {
+    width: 1150px;
+    display: flex;
+    margin: 20px auto;
+  }
+  .first-section {
+    width: 280px;
+    height: 564px;
+    padding-top: 24px;
+  }
+  .second-section {
+    height: 564px;
+    width: 860px;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 24px;
+  }
+  .main-card__user {
+    height: 355px;
+    flex-direction: column;
+  }
+  .main-card__image {
+    width: 85px;
+    margin-top: 45px;
+  }
+  .main-card__title {
+    font-size: 1em;
+  }
+  .main-card__name {
+    font-size: 2.4em;
+  }
+  .main-card__dates {
+    margin-top: 244px;
+    height: 200px;
+    flex-direction: column;
+    padding: 40px 32px 18px;
+  }
+
+  /* tarjetas de la segunda sección */
+
+  .card {
+    width: 240px;
+    height: 244px;
+    margin-bottom: 25px;
+  }
+  .card__image {
+    padding-left: 140px;
+  }
+  .card__details {
+    height: 200px;
+    bottom: -10px;
+  }
+  .card__time {
+    height: 300px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .card__hour {
+    font-size: 3em;
+  }
+}
